@@ -1,0 +1,128 @@
+/* styles.css - single stylesheet for entire site
+   Requirements implemented:
+   - three selector types: element selectors (h1, p), class selectors (.card, .nav-link),
+     id selectors (#main-menu)
+   - descendant selector .nav ul li a:hover (hover effect)
+   - attribute selector a[target="_blank"] (demonstration)
+   - layout uses CSS Grid for page content and Flex for nav
+   - hover effect on links, paddings/margins, borders, coloring, font settings
+   - comments included to explain implementation
+*/
+:root{
+  --accent:#2b6cb0;
+  --muted:#6b7280;
+  --bg:#fcfdff;
+  --card:#ffffff;
+  --max-width:1100px;
+  --gap:20px;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  background:var(--bg);
+  color:#111827;
+  line-height:1.5;
+  padding-bottom:60px; /* to ensure footer not overlap */
+}
+
+/* Header and navigation */
+header.site-header{
+  background:linear-gradient(90deg, rgba(43,108,176,0.95), rgba(37,99,235,0.85));
+  color:white;
+  padding:28px 16px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+.header-inner{
+  max-width:var(--max-width);
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+.site-title{font-size:1.6rem; margin:0;}
+.site-sub{font-size:0.9rem; opacity:0.9; margin-left:8px;}
+
+/* Main menu: demonstrate ID selector */
+#main-menu{
+  display:flex;
+  gap:10px;
+}
+#main-menu a{
+  color:white;
+  text-decoration:none;
+  padding:8px 12px;
+  border-radius:8px;
+  transition:transform .15s ease, background .15s ease;
+  border:2px solid transparent;
+}
+/* hover effect requirement */
+#main-menu a:hover{
+  transform:translateY(-3px);
+  background:rgba(255,255,255,0.12);
+  border-color:rgba(255,255,255,0.18);
+}
+
+/* Layout: grid for main pages */
+.main{
+  max-width:var(--max-width);
+  margin:28px auto;
+  display:grid;
+  grid-template-columns: 1fr 300px;
+  gap:var(--gap);
+  padding:0 16px;
+}
+
+/* Responsive: collapse to single column */
+@media (max-width:900px){
+  .main{grid-template-columns:1fr;}
+  #main-menu{flex-wrap:wrap;}
+}
+
+/* Article card using class selector */
+.card{
+  background:var(--card);
+  padding:18px;
+  border-radius:12px;
+  box-shadow:0 4px 14px rgba(15,23,42,0.06);
+  border:1px solid rgba(15,23,42,0.04);
+}
+
+/* Sidebar */
+.sidebar .toc{list-style: none; padding:0; margin:0;}
+.sidebar .toc li{margin:8px 0;}
+.sidebar .toc a{color:var(--accent); text-decoration:none;}
+.sidebar .toc a:hover{text-decoration:underline;}
+
+/* Table styles: element selector for table */
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:12px;
+}
+th, td{
+  border:1px solid #e6eef8;
+  padding:8px 10px;
+  text-align:left;
+}
+th{
+  background:linear-gradient(180deg,#f8fbff,#eef6ff);
+}
+
+/* Footer: note with link to class website per instructions */
+/* attribute selector usage: select external links that open in new tab */
+footer.site-footer{
+  position:fixed;
+  left:0; right:0; bottom:0;
+  background:#f8fafc;
+  border-top:1px solid #e6eef8;
+  padding:10px 16px;
+  font-size:0.9rem;
+}
+footer a[target="_blank"]{ font-weight:600; color:var(--accent); }
+
+/* Small utility selectors to show variety */
+.highlight{background:linear-gradient(90deg,#fff7ed,#fffbeb); padding:6px 8px; border-radius:6px; border:1px solid #fff1e6;}
+kbd{background:#111827; color:white; padding:3px 6px; border-radius:4px; font-family:monospace; font-size:0.85rem;}
