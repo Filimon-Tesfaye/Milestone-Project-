@@ -1,14 +1,9 @@
 <!doctype html>
-<!--
-  topic1.html - generated for IT3203 Project Milestone #1
-  Single CSS file used: styles.css
-  Comments present to explain structure.
--->
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Introduction & History - IT3203</title>
+  <title>History of HTTP - IT3203</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,74 +13,100 @@
         <img src="logo.svg" alt="IT3203 logo" style="height:48px; width:auto; border-radius:6px;">
         <div>
           <h1 class="site-title">IT3203 Web Project</h1>
-          <div class="site-sub">Milestone 1 — Basic Website</div>
+          <div class="site-sub">History of HTTP</div>
         </div>
       </div>
-      <!-- Main menu is consistent on every page -->
       <nav id="main-menu" aria-label="Main menu">
-  <a class="nav-link" href="index.html">Home</a>
-  <a class="nav-link" href="topic1.html">History</a>
-  <a class="nav-link" href="topic2.html">HTTP Evolution</a>
-  <a class="nav-link" href="keyconcepts.html">Key Concepts</a>
-  <a class="nav-link" href="references.html">References</a>
-  <a class="nav-link" href="about.html">About</a>
-</nav>
-
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="topic1.html">History</a>
+        <a class="nav-link" href="topic2.html">HTTP Evolution</a>
+        <a class="nav-link" href="keyconcepts.html">Key Concepts</a>
+        <a class="nav-link" href="references.html">References</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="quiz.html">Quiz</a>
+      </nav>
     </div>
   </header>
 
   <main class="main" role="main">
     <article class="card">
-      <h1>Introduction & History</h1>
-      <p>This page summarizes the early history of HTTP and key milestones.</p>
+      <h1>A Short History of HTTP</h1>
+      <p>
+        The HyperText Transfer Protocol (HTTP) was originally created in the early 1990s
+        at CERN as part of Tim Berners‑Lee’s work on the World Wide Web. The goal was
+        simple: define a lightweight protocol that allowed a client (a web browser)
+        to request hypertext documents from a server.
+      </p>
 
-<h2>Milestones</h2>
-<ol>
-  <li>1991 — HTTP/0.9 introduced by Tim Berners-Lee.</li>
-  <li>1996–1997 — HTTP/1.0 and HTTP/1.1 standardized with headers and persistent connections.</li>
-  <li>2015 — HTTP/2 (binary framing, multiplexing).</li>
-  <li>~2020s — HTTP/3 using QUIC adoption grows.</li>
-</ol>
+      <h2>Early Web and HTTP/0.9</h2>
+      <p>
+        The first documented version of HTTP is sometimes called HTTP/0.9. It was
+        extremely simple and supported only one method: <code>GET</code>. Requests
+        did not include headers, and servers responded with just the raw HTML body.
+        There was no concept of status codes or content negotiation.
+      </p>
 
-<h2>Quick comparison</h2>
-<table>
-  <thead>
-    <tr><th>Version</th><th>Transport</th><th>Main improvement</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>HTTP/0.9</td><td>TCP</td><td>Simple GET, no headers</td></tr>
-    <tr><td>HTTP/1.1</td><td>TCP</td><td>Persistent connections, chunked encoding</td></tr>
-    <tr><td>HTTP/2</td><td>TCP</td><td>Binary framing, multiplexing</td></tr>
-    <tr><td>HTTP/3</td><td>QUIC (UDP)</td><td>Connection migration, lower latency</td></tr>
-  </tbody>
-</table>
+      <div class="table-wrapper">
+        <table>
+          <caption>Early HTTP Milestones</caption>
+          <thead>
+            <tr>
+              <th>Year (approx.)</th>
+              <th>Milestone</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1990–1991</td>
+              <td>Prototype HTTP and first web server</td>
+              <td>Used at CERN to share research documents.</td>
+            </tr>
+            <tr>
+              <td>1993</td>
+              <td>HTTP/0.9 widely used</td>
+              <td>Simple text‑based protocol, only <code>GET</code>.</td>
+            </tr>
+            <tr>
+              <td>1996</td>
+              <td>HTTP/1.0 described in RFC 1945</td>
+              <td>Introduced headers, status codes, and more methods.</td>
+            </tr>
+            <tr>
+              <td>1997</td>
+              <td>HTTP/1.1 published in RFC 2068 (later 2616)</td>
+              <td>Became the dominant version of HTTP for many years.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-<h2>Further reading</h2>
-<ul>
-  <li>RFC 2616 — HTTP/1.1 (historical)</li>
-  <li>RFC 7540 — HTTP/2</li>
-  <li>RFC 9000 — QUIC</li>
-</ul>
+      <h2>Standardization Through RFCs</h2>
+      <p>
+        Over time, HTTP was standardized through a series of Request for Comments (RFCs).
+        HTTP/1.0 was documented in RFC&nbsp;1945, and HTTP/1.1 was later refined and
+        clarified in a set of specifications that replaced the original single RFC.
+        These documents defined the request–response model that browsers and servers
+        still use today.
+      </p>
 
+      <h2>From Simple Documents to a Full Web Platform</h2>
+      <p>
+        As the web grew from static documents to complex applications, HTTP had to
+        support new use cases: image loading, forms, cookies, caching, streaming,
+        and APIs. This growth eventually motivated new protocol versions
+        (HTTP/2 and HTTP/3) that focused on performance and reliability on modern
+        networks. Those versions are discussed in more detail on the
+        <a href="topic2.html">HTTP Evolution</a> page.
+      </p>
     </article>
-
-    <aside class="card sidebar" aria-label="Sidebar">
-      <h3>On this site</h3>
-      <ul class="toc">
-        <li><a href="index.html">Home (cover)</a></li>
-        <li><a href="topic1.html">History</a></li>
-        <li><a href="topic2.html">HTTP Evolution</a></li>
-        <li><a href="keyconcepts.html">Key Concepts</a></li>
-        <li><a href="references.html">References</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-      <hr>
-      <p class="highlight"><strong>Note:</strong> This site is a class project.</p>
-    </aside>
   </main>
 
   <footer class="site-footer">
-    This is a course project for IT3203 — <a href="https://ksuweb.github.io/IT3203/" target="_blank" rel="noopener">KSU IT3203 class page</a>.
+    This is a course project for IT3203 — 
+    <a href="https://ksuweb.github.io/IT3203/" target="_blank" rel="noopener">
+      KSU IT3203 class page
+    </a>.
   </footer>
 </body>
 </html>

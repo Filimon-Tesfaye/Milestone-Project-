@@ -14,7 +14,7 @@
         <img src="logo.svg" alt="IT3203 logo" style="height:48px; width:auto; border-radius:6px;">
         <div>
           <h1 class="site-title">IT3203 Web Project</h1>
-          <div class="site-sub">Milestone 2 — Dynamic Frontend</div>
+          <div class="site-sub">Milestone 3 — HTTP Self-Assessment</div>
         </div>
       </div>
       <nav id="main-menu" aria-label="Main menu">
@@ -28,48 +28,105 @@
       </nav>
     </div>
   </header>
+
   <main class="main" role="main">
     <article class="card">
       <h1>HTTP Self-Assessment Quiz</h1>
+      <p>
+        Answer the questions below to check your understanding of HTTP versions
+        and key features. Your score and correct answers will be shown
+        automatically after you submit.
+      </p>
+
       <form id="quiz-form">
         <section>
           <h3>1. Fill in the blank</h3>
-          <p>HTTP stands for <input type="text" id="q1" placeholder="Your answer here"></p>
+          <p>
+            HTTP stands for
+            <label for="q1" class="visually-hidden">HTTP full name</label>
+            <input type="text" id="q1" placeholder="Your answer here">
+          </p>
         </section>
+
         <section>
           <h3>2. Which version introduced persistent connections?</h3>
-          <label><input type="radio" name="q2" value="0.9"> HTTP/0.9</label><br>
-          <label><input type="radio" name="q2" value="1.1"> HTTP/1.1</label><br>
-          <label><input type="radio" name="q2" value="2"> HTTP/2</label>
+          <label>
+            <input type="radio" name="q2" value="0.9">
+            HTTP/0.9
+          </label>
+          <label>
+            <input type="radio" name="q2" value="1.1">
+            HTTP/1.1
+          </label>
+          <label>
+            <input type="radio" name="q2" value="2">
+            HTTP/2
+          </label>
         </section>
+
         <section>
           <h3>3. HTTP/3 uses which transport protocol?</h3>
-          <label><input type="radio" name="q3" value="TCP"> TCP</label><br>
-          <label><input type="radio" name="q3" value="UDP"> UDP</label><br>
-          <label><input type="radio" name="q3" value="QUIC"> QUIC</label>
+          <label>
+            <input type="radio" name="q3" value="TCP">
+            TCP
+          </label>
+          <label>
+            <input type="radio" name="q3" value="UDP">
+            UDP
+          </label>
+          <label>
+            <input type="radio" name="q3" value="QUIC">
+            QUIC
+          </label>
         </section>
+
         <section>
           <h3>4. Which browsers currently support HTTP/3?</h3>
-          <label><input type="radio" name="q4" value="Chrome, Firefox, Edge"> Chrome, Firefox, Edge</label><br>
-          <label><input type="radio" name="q4" value="Internet Explorer"> Internet Explorer</label><br>
-          <label><input type="radio" name="q4" value="Safari only"> Safari only</label>
+          <label>
+            <input type="radio" name="q4" value="Chrome, Firefox, Edge">
+            Chrome, Firefox, Edge
+          </label>
+          <label>
+            <input type="radio" name="q4" value="Internet Explorer">
+            Internet Explorer
+          </label>
+          <label>
+            <input type="radio" name="q4" value="Safari only">
+            Safari only
+          </label>
         </section>
+
         <section>
           <h3>5. Select all features introduced in HTTP/2</h3>
-          <label><input type="checkbox" name="q5" value="Multiplexing"> Multiplexing</label><br>
-          <label><input type="checkbox" name="q5" value="Binary Framing"> Binary Framing</label><br>
-          <label><input type="checkbox" name="q5" value="Built-in Encryption"> Built-in Encryption</label>
+          <label>
+            <input type="checkbox" name="q5" value="Multiplexing">
+            Multiplexing
+          </label>
+          <label>
+            <input type="checkbox" name="q5" value="Binary Framing">
+            Binary Framing
+          </label>
+          <label>
+            <input type="checkbox" name="q5" value="Built-in Encryption">
+            Built-in Encryption
+          </label>
         </section>
-        <div style="display:flex;gap:10px;margin-top:10px;">
+
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;">
           <button type="submit">Submit Quiz</button>
           <button type="button" id="reset-btn">Reset</button>
         </div>
       </form>
+
       <div id="results" style="margin-top:20px;"></div>
     </article>
   </main>
+
   <footer class="site-footer">
-    This is a course project for IT3203 — <a href="https://ksuweb.github.io/IT3203/" target="_blank" rel="noopener">KSU IT3203 class page</a>.
+    This is a course project for IT3203 — 
+    <a href="https://ksuweb.github.io/IT3203/" target="_blank" rel="noopener">
+      KSU IT3203 class page
+    </a>.
   </footer>
 </body>
 </html>
